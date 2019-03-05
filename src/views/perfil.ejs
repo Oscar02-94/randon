@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>perfilr de imagen</title>
+    <%- include("partial/head") %>
+  </head>
+  <body>
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                        <div class="card animated fadeInDown ">
+                                <!--con animated fadeInDown le damos la animacion ala tarjeta para que todo lo que benga dentro se anime esto lo hacemos con l que importamos de animate.css -->
+                                <img src="<%= image.path %>" class="card-img-top" />
+                            <div class="card-body">
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= image.title %></h5>
+        
+                                    <p class="card-text"><%= image.description%></p>
+        
+                                    <p class="card-text"><%= format(image.created_at)%></p>
+                                     <!-- con la etiquta a comenzamos a redireccionar ala etiquta image/la imangen con el .id -->
+        
+                                    <a href="/image/<%= image._id%>/delete" class="btn btn-danger">
+                                    borrar imagen
+                                    </a>
+                                </div>
+                             </div>
+                        </div>
+                </div>
+               
+            </div>
+        </div>
+  </body>
+</html>

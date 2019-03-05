@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> image cargada </title>
+        <!--con este codigo le damos mejor vista la codigo sacando la cdn de bustrap4 y colacandola en la carpeta partial para llamarlo con el codigo ===>: <%- include("partial/head") %> -->
+       <%- include("partial/head") %>
+       
+    </head>
+    
+    <body>
+
+        <%- include("partial/navegacion")%>
+
+        <div class="conteiner p-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                                        
+                                <form action="/uploader" method="POST" enctype="multipart/form-data">
+                                    
+                                 
+                                    <div class="input-group mb-3">
+                                            <div class="custom-file">
+                                              <input type="file"  name="image" class="custom-file-input" id="inputGroupFile02">
+                                              <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                                            </div>
+                                            </div>
+                                           
+                                            <div class="form-grup">
+                                                <input type="text" name="title" placeholder="title" class="form-control">
+                                            </div>
+                                            
+
+                                          </div>
+                                          <div class="form-grup">
+                                              <textarea name="description" class="form-control" placeholder="description"></textarea>
+                                          </div>
+                                          
+                                          <div class="form-grup">
+                                              <button type="submit" class="btn btn-success btn-block">
+                                                  upload
+                                              </button>
+                                          </div>
+                                </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </body>
+</html>
+
+
+
+
+
+
